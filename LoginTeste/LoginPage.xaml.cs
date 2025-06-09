@@ -19,8 +19,23 @@ public partial class LoginPage : ContentPage
         lista.Add(
             new Usuario()
             {
-                Nome = "maria",
-                Senha = "321"
+                Nome = "mariana",
+                Senha = "456"
+            }
+        );
+        lista.Add(
+        new Usuario()
+        {
+            Nome = "bruno",
+            Senha = "789"
+        }
+        );
+
+        lista.Add(
+            new Usuario()
+            {
+                Nome = "leticia",
+                Senha = "101112"
             }
         );
     }

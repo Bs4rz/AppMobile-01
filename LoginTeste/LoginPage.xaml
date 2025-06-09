@@ -11,7 +11,7 @@
         Spacing="10"
         Padding="10">
 
-        <Label Text="Sistema de Login"
+        <Label Text="Login de usuário"
                HorizontalOptions="Center" />
 
         <Label Text="Usuário" />
