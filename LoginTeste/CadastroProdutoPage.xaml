@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCadastro.CadastroProdutoPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <VerticalStackLayout>
+        <Label Text="Nome do Produto:" />
+        <Entry x:Name="nomeProd" Placeholder="Digite o nome do produto" />
+
+        <Label Text="Descrição do Produto:" />
+        <Entry x:Name="descProd" Placeholder="Descreva o produto" />
+
+        <Label Text="Categoria do Produto:" />
+        <Entry x:Name="categoriaProd" Placeholder="Qual a categoria do produto" />
+
+        <Label Text="Preço do Produto:" />
+        <Entry x:Name="precoProd" Placeholder="Qual o preço do produto" Keyboard="Numeric" />
+
+        <Button
+            x:Name="btnVoltar"
+            Text="Voltar"
+            Clicked="btnVoltar_Clicked"
+            VerticalOptions="End"
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="btnConcluirCadastro"
+            Text="Cadastrar"
+            Clicked="btnConcluirCadastro_Clicked"
+            VerticalOptions="End"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

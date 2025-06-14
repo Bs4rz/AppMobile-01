@@ -1,4 +1,6 @@
-﻿namespace LoginTeste
+﻿using AppCadastro;
+
+namespace LoginTeste
 {
     public partial class MainPage : ContentPage
     {
@@ -21,6 +23,17 @@
             await Shell.Current.GoToAsync("Login");
         }
         protected override bool OnBackButtonPressed() { return true; }
+
+        private async void btnPagCadastro_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CadastroProdutoPage());
+        }
+
+        private async void btnProdutosPage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProdutosPage());
+        }
+
     }
 
 }

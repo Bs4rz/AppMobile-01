@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCadastro.ProdutosPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <VerticalStackLayout Padding="10">
+        <Label Text="Lista de Produtos" FontSize="20" HorizontalOptions="Center" Margin="0,10"/>
+
+        <CollectionView x:Name="listaProdutosView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding nomeProd}" FontAttributes="Bold" FontSize="18"/>
+                            <Label Text="{Binding descProd}" />
+                            <Label Text="{Binding categoriaProd}" />
+                            <Label Text="{Binding precoProd, StringFormat='Preço: {0:C}'}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button
+        x:Name="btnVoltar2"
+        Text="Voltar"
+        Clicked="btnVoltar_Clicked2"
+        VerticalOptions="End"
+        HorizontalOptions="Center"
+            />
+    </VerticalStackLayout>
+</ContentPage>

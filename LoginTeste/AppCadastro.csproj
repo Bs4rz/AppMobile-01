@@ -64,6 +64,7 @@
 
 	<ItemGroup>
 	  <MauiXaml Remove="LoginPage1xaml.xaml" />
+	  <MauiXaml Remove="Resources\Theme\LightTheme.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -77,7 +78,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="CadastroProdutoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ProdutosPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Theme\DarkTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Theme\WhiteTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

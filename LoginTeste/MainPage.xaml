@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LoginTeste.MainPage">
+             x:Class="LoginTeste.MainPage"
+            NavigationPage.HasNavigationBar="False"
+            BackgroundColor="{DynamicResource PageBackgroundColor}">
     <Shell.BackButtonBehavior>
         <BackButtonBehavior IsVisible="False" IsEnabled="False" />
     </Shell.BackButtonBehavior>
@@ -16,13 +18,29 @@
                 SemanticProperties.Description="caixa bonita"
                 HorizontalOptions="Start"/>
 
+            <Button
+                x:Name="btnPagCadastro"
+                Text="Cadastrar Produto"
+                Clicked="btnPagCadastro_Clicked"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+            />
 
             <Button
-            x:Name="btnLogout"
-            Text="Logout"
-            Clicked="btnLogout_Clicked"
-            VerticalOptions="End"
-            HorizontalOptions="Center"
+                x:Name="btnProdutosPage"
+                Text="Pagina de Produtos"
+                Clicked="btnProdutosPage_Clicked"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+            />
+
+
+            <Button
+                x:Name="btnLogout"
+                Text="Logout"
+                Clicked="btnLogout_Clicked"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
             />
         </VerticalStackLayout>
     </ScrollView>
