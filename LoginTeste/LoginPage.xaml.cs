@@ -86,7 +86,6 @@ public partial class LoginPage : ContentPage
         ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
         if (mergedDictionaries != null)
         {
-            //You can filter out your additional resources & remove theme resource only
             mergedDictionaries.Clear();
             darkTheme = !darkTheme;
             if (darkTheme)

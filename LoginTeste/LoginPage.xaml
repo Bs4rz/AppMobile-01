@@ -1,35 +1,63 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
-            x:Class="LoginTeste.LoginPage"  
-            BackgroundColor="{DynamicResource PageBackgroundColor}">  
-   <Shell.BackButtonBehavior>  
-       <BackButtonBehavior IsVisible="False" IsEnabled="False" />  
-   </Shell.BackButtonBehavior>  
-   <VerticalStackLayout  
-       VerticalOptions="Center"  
-       Spacing="10"  
-       Padding="10">  
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="LoginTeste.LoginPage"
+            NavigationPage.HasNavigationBar="False"
+            BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+    </Shell.BackButtonBehavior>
 
-       <Button   
-               WidthRequest="40"  
-               CornerRadius="20"
-               Clicked="Button_Clicked"  
-               TextColor="{DynamicResource AppTextColor}"  
-               BackgroundColor="{DynamicResource AppButtonColor}"/>  
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-       <Label Text="Login de usuário"  
-              HorizontalOptions="Center" />  
+        <ImageButton Grid.Row="0"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                Margin="10"
+                WidthRequest="50"
+                HeightRequest="50"
+                CornerRadius="50"
+                Clicked="Button_Clicked"  
+                BackgroundColor="{DynamicResource PageBackgroundColor}"
+                Source="{DynamicResource AppSolImage}"/>
 
-       <Label Text="Usuário" />  
-       <Entry x:Name="txtUsuario" ReturnType="Next" />  
+        
 
-       <Label Text="Senha" />  
-       <Entry x:Name="txtSenha" IsPassword="True" ReturnType="Go" Completed="txtSenha_Completed" />  
-       <Button  
-           x:Name="btnLogin"  
-           Text="Login"  
-           Clicked="btnLogin_Clicked"  
-           />  
-   </VerticalStackLayout>  
+        <VerticalStackLayout Grid.Row="1"
+                             VerticalOptions="Center"
+                             Spacing="10"
+                             Padding="10">
+
+            <Image Source="caixa.png"
+                   Grid.Row="0"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   HeightRequest="50"
+                   WidthRequest="50"
+                   Margin="10"/>
+            
+            <Label Text="Login de usuário"  
+                   HorizontalOptions="Center" 
+                   TextColor="{DynamicResource AppTextColor}"/>
+
+            <Label Text="Usuário" 
+                   TextColor="{DynamicResource AppTextColor}"/>
+            <Entry x:Name="txtUsuario" ReturnType="Next"
+                   BackgroundColor="{DynamicResource AppButtonColor}"/>
+
+            <Label Text="Senha" 
+                   TextColor="{DynamicResource AppTextColor}"/>
+            <Entry x:Name="txtSenha" IsPassword="True" ReturnType="Go" Completed="txtSenha_Completed" 
+                   BackgroundColor="{DynamicResource AppButtonColor}"/>
+            <Button
+                x:Name="btnLogin"
+                Text="Login"
+                Clicked="btnLogin_Clicked"
+                TextColor="{DynamicResource AppTextColor}"
+                BackgroundColor="{DynamicResource AppButtonColor}"/>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

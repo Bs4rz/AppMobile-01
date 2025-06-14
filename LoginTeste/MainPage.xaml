@@ -8,9 +8,22 @@
         <BackButtonBehavior IsVisible="False" IsEnabled="False" />
     </Shell.BackButtonBehavior>
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+               
+            </Grid.RowDefinitions>
+
+            <ImageButton
+                HorizontalOptions="End"
+                WidthRequest="50"
+                HeightRequest="50"
+                CornerRadius="50"
+                Clicked="Button_Clicked"
+                BackgroundColor="{DynamicResource PageBackgroundColor}"
+                Source="{DynamicResource AppSolImage}"/>
+
             <Image
                 Source="caixa.png"
                 HeightRequest="36"
@@ -18,31 +31,45 @@
                 SemanticProperties.Description="caixa bonita"
                 HorizontalOptions="Start"/>
 
-            <Button
-                x:Name="btnPagCadastro"
-                Text="Cadastrar Produto"
-                Clicked="btnPagCadastro_Clicked"
-                VerticalOptions="End"
-                HorizontalOptions="Center"
-            />
 
-            <Button
-                x:Name="btnProdutosPage"
-                Text="Pagina de Produtos"
-                Clicked="btnProdutosPage_Clicked"
-                VerticalOptions="End"
-                HorizontalOptions="Center"
-            />
+            <VerticalStackLayout Grid.Row="1"
+                             VerticalOptions="Center"
+                             Spacing="15"
+                             Padding="15">
+                
+                
+                
+
+                <Button
+                    x:Name="btnPagCadastro"
+                    Text="Cadastrar Produto"
+                    Clicked="btnPagCadastro_Clicked"
+                    HorizontalOptions="Center"
+                    TextColor="{DynamicResource AppTextColor}"
+                    BackgroundColor="{DynamicResource AppButtonColor}"
+                />
+
+                <Button
+                    x:Name="btnProdutosPage"
+                    Text="Pagina de Produtos"
+                    Clicked="btnProdutosPage_Clicked"
+                    HorizontalOptions="Center"
+                    TextColor="{DynamicResource AppTextColor}"
+                    BackgroundColor="{DynamicResource AppButtonColor}"
+                />
 
 
-            <Button
-                x:Name="btnLogout"
-                Text="Logout"
-                Clicked="btnLogout_Clicked"
-                VerticalOptions="End"
-                HorizontalOptions="Center"
-            />
-        </VerticalStackLayout>
+                <Button
+                    x:Name="btnLogout"
+                    Text="Logout"
+                    Clicked="btnLogout_Clicked"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    TextColor="{DynamicResource AppTextColor}"
+                    BackgroundColor="{DynamicResource AppButtonColor}"
+                />
+            </VerticalStackLayout>
+         </Grid>
     </ScrollView>
 
 </ContentPage>

@@ -3,9 +3,8 @@
                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                      x:Class="AppCadastro.Resources.Theme.DarkTheme">
 
-    
-    <Color x:Key="PrimaryColor">#131D4F</Color>
     <Color x:Key="PageBackgroundColor">#254D70</Color>
     <Color x:Key="AppTextColor">#EFE4D2</Color>
     <Color x:Key="AppButtonColor">#954C2E</Color>
+    <FileImageSource x:Key="AppSolImage" File="sol.png" />
 </ResourceDictionary>

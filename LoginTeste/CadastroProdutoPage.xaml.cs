@@ -2,6 +2,7 @@ namespace AppCadastro;
 
 public partial class CadastroProdutoPage : ContentPage
 {
+    bool darkTheme = false;
     public CadastroProdutoPage()
     {
         InitializeComponent();
@@ -31,4 +32,25 @@ public partial class CadastroProdutoPage : ContentPage
     {
         await Navigation.PopAsync();
     }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
+        if (mergedDictionaries != null)
+        {
+            mergedDictionaries.Clear();
+            darkTheme = !darkTheme;
+            if (darkTheme)
+            {
+
+                mergedDictionaries.Add(new Resources.Theme.DarkTheme());
+            }
+            else
+            {
+
+                mergedDictionaries.Add(new Resources.Theme.WhiteTheme());
+            }
+        }
+    }
 }
+

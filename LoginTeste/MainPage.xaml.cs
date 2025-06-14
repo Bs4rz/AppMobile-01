@@ -1,11 +1,12 @@
 ﻿using AppCadastro;
+using AppCadastro.Resources.Theme;
 
 namespace LoginTeste
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
-
+        bool darkTheme = false;
         public MainPage()
         {
             InitializeComponent();
@@ -34,6 +35,25 @@ namespace LoginTeste
             await Navigation.PushAsync(new ProdutosPage());
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
+            if (mergedDictionaries != null)
+            {
+                mergedDictionaries.Clear();
+                darkTheme = !darkTheme;
+                if (darkTheme)
+                {
+
+                    mergedDictionaries.Add(new DarkTheme());
+                }
+                else
+                {
+
+                    mergedDictionaries.Add(new WhiteTheme());
+                }
+            }
+        }
     }
 
 }
