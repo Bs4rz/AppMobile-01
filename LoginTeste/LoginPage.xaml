@@ -33,10 +33,10 @@
 
             <Image Source="caixa.png"
                    Grid.Row="0"
-                   HorizontalOptions="Start"
+                   HorizontalOptions="Center"
                    VerticalOptions="Start"
-                   HeightRequest="50"
-                   WidthRequest="50"
+                   HeightRequest="150"
+                   WidthRequest="150"
                    Margin="10"/>
             
             <Label Text="Login de usuário"  
