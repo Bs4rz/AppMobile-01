@@ -17,6 +17,7 @@
         WidthRequest="50"
         HeightRequest="50"
         CornerRadius="50"
+        BorderColor="Transparent"
         Clicked="Button_Clicked"
         BackgroundColor="{DynamicResource PageBackgroundColor}"
         Source="{DynamicResource AppSolImage}"/>
